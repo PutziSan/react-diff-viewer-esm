@@ -4,6 +4,8 @@
 </p>
 <br/>
 
+> this is a fork of [react-diff-viewer](https://github.com/praneshr/react-diff-viewer) with updated dependencies and build with tsup, so that this library can be used  as a normal ESM Module
+
 [![Build Status](https://travis-ci.com/praneshr/react-diff-viewer.svg?branch=master)](https://travis-ci.com/praneshr/react-diff-viewer)
 [![npm version](https://badge.fury.io/js/react-diff-viewer.svg)](https://badge.fury.io/js/react-diff-viewer)
 [![GitHub license](https://img.shields.io/github/license/praneshr/react-diff-viewer.svg)](https://github.com/praneshr/react-diff-viewer/blob/master/LICENSE)
@@ -17,18 +19,18 @@ Check [here](https://github.com/praneshr/react-diff-viewer/tree/v2.0) for v2.0
 ## Install
 
 ```bash
-yarn add react-diff-viewer
+yarn add react-diff-viewer-esm
 
 # or
 
-npm i react-diff-viewer
+npm i react-diff-viewer-esm
 ```
 
 ## Usage
 
 ```javascript
 import React, { PureComponent } from 'react';
-import ReactDiffViewer from 'react-diff-viewer';
+import ReactDiffViewer from 'react-diff-viewer-esm';
 
 const oldCode = `
 const a = 10
@@ -62,12 +64,12 @@ class Diff extends PureComponent {
 ## Props
 
 | Prop                      | Type            | Default                        | Description                                                                                                                                                                                                                                                                                                                                                                                                      |
-| ------------------------- | --------------- | ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ------------------------- | --------------- | ------------------------------ |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | oldValue                  | `string`        | `''`                           | Old value as string.                                                                                                                                                                                                                                                                                                                                                                                             |
 | newValue                  | `string`        | `''`                           | New value as string.                                                                                                                                                                                                                                                                                                                                                                                             |
 | splitView                 | `boolean`       | `true`                         | Switch between `unified` and `split` view.                                                                                                                                                                                                                                                                                                                                                                       |
 | disableWordDiff           | `boolean`       | `false`                        | Show and hide word diff in a diff line.                                                                                                                                                                                                                                                                                                                                                                          |
-| compareMethod             | `DiffMethod`    | `DiffMethod.CHARS`             | JsDiff text diff method used for diffing strings. Check out the [guide](https://github.com/praneshr/react-diff-viewer/tree/v3.0.0#text-block-diff-comparison) to use different methods.                                                                                                                                                                                                                          |
+| compareMethod             | `DiffMethod`    | `DiffMethod.CHARS`             | JsDiff text diff method used for diffing strings. Check out the [guide](https://github.com/praneshr/react-diff-viewer-esm/tree/v3.0.0#text-block-diff-comparison) to use different methods.                                                                                                                                                                                                                        |
 | hideLineNumbers           | `boolean`       | `false`                        | Show and hide line numbers.                                                                                                                                                                                                                                                                                                                                                                                      |
 | renderContent             | `function`      | `undefined`                    | Render Prop API to render code in the diff viewer. Helpful for [syntax highlighting](#syntax-highlighting)                                                                                                                                                                                                                                                                                                       |
 | onLineNumberClick         | `function`      | `undefined`                    | Event handler for line number click. `(lineId: string) => void`                                                                                                                                                                                                                                                                                                                                                  |
@@ -103,7 +105,7 @@ An example using [Prism JS](https://prismjs.com)
 
 ```javascript
 import React, { PureComponent } from 'react';
-import ReactDiffViewer from 'react-diff-viewer';
+import ReactDiffViewer from 'react-diff-viewer-esm';
 
 const oldCode = `
 const a = 10
@@ -166,7 +168,7 @@ enum DiffMethod {
 
 ```javascript
 import React, { PureComponent } from 'react';
-import ReactDiffViewer, { DiffMethod } from 'react-diff-viewer';
+import ReactDiffViewer, { DiffMethod } from 'react-diff-viewer-esm';
 
 const oldCode = `
 {
@@ -290,7 +292,7 @@ For keys other than `variables`, the value can either be an object or string int
 
 ```javascript
 import React, { PureComponent } from 'react';
-import ReactDiffViewer from 'react-diff-viewer';
+import ReactDiffViewer from 'react-diff-viewer-esm';
 
 const oldCode = `
 const a = 10
